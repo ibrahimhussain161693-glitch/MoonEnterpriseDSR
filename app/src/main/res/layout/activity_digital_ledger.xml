@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F9"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧾 Shop Digital Ledger &amp; Printing"
+            android:textColor="#1A237E"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Shop Spinner -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Shop:"
+                android:textColor="#1A237E"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spShops"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Ledger Filter Radio Group -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Ledger History Filter:"
+                android:textColor="#1A237E"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgFilters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="All" />
+
+                <RadioButton
+                    android:id="@+id/rbPurchase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Purchase" />
+
+                <RadioButton
+                    android:id="@+id/rbPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment" />
+
+                <RadioButton
+                    android:id="@+id/rbDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discount" />
+            </RadioGroup>
+
+            <!-- Outstanding Due Display -->
+            <TextView
+                android:id="@+id/tvCurrentDue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#FFEBEE"
+                android:padding="10dp"
+                android:text="Current Due: Tk. 0.0"
+                android:textColor="#C62828"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Ledger Transactions Text -->
+            <TextView
+                android:id="@+id/tvLedgerHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="4dp"
+                android:text="Select a shop to load transaction history..."
+                android:textColor="#333333" />
+
+            <!-- Collection Entry Form -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Collect Payment / Cash Entry:"
+                android:textColor="#1A237E"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCollectAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Collected Amount (Tk.)"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/btnSaveCollection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#2E7D32"
+                android:text="💵 Save Payment Collection"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnPrintReceipt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#1A237E"
+                android:text="🖨️ Print Bluetooth Thermal Receipt"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

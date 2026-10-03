@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F9"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MOON ENTERPRISE"
+            android:textAlignment="center"
+            android:textColor="#1A237E"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvGpsStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="GPS Status: Checking..."
+            android:textAlignment="center"
+            android:textColor="#2E7D32"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAdminOfferNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FFF9C4"
+            android:padding="10dp"
+            android:text="আজকের অফার: ৫,০০০ টাকার বেশি বিলে ৫টি কোন ফ্রি!"
+            android:textColor="#F57F17"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="দোকান ও মেমো এন্ট্রি"
+                android:textColor="#1A237E"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etShopName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="দোকানের নাম" />
+
+            <EditText
+                android:id="@+id/etShopPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="দোকানদারের হোয়াটসঅ্যাপ/মোবাইল নম্বর"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/etProductsSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="আইটেম ও বিবরণ (যেমন: Cone 100, Choco 50)" />
+
+            <EditText
+                android:id="@+id/etTotalBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="মোট মেমো বিল (টাকা)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ডিসকাউন্ট/ছাড় (টাকা)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etFreeGifts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ফ্রি গিফট (যদি থাকে)" />
+
+            <EditText
+                android:id="@+id/etCashCollected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="নগদ জমা (Cash Received)"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#1A237E"
+                android:text="মেমো সাবমিট করুন"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnPrintReceipt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#2E7D32"
+                android:text="🖨️ থার্মাল প্রিন্ট দিন"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnSendWhatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#25D366"
+                android:text="💬 WhatsApp-এ ফ্রি মেমো পাঠান"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

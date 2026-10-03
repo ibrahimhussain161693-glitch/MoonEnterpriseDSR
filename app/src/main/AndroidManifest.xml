@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Moon Enterprise DSR"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- SR Module Activities -->
+        <activity
+            android:name=".sr.SRDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sr.ShopRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sr.OrderPlacementActivity"
+            android:exported="false" />
+
+        <!-- DSR Module Activities -->
+        <activity
+            android:name=".dsr.DSRDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dsr.LoadSheetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dsr.DeliveryOrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dsr.DigitalLedgerActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

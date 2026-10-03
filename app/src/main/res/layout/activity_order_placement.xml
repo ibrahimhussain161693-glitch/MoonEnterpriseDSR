@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F9"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Place Order &amp; Route to DSR"
+            android:textColor="#1A237E"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Shop Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Shop:"
+                android:textColor="#1A237E"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spShops"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp" />
+
+            <!-- DSR Route Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Select DSR for Delivery:"
+                android:textColor="#1A237E"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spDsrs"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Product Items -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Product Quantities:"
+                android:textColor="#1A237E"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etConeQty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cone Ice Cream (Pieces)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etMalaiQty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Malai Choco Bar (Pieces)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etStrawberryQty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Strawberry Box 500ml (Pieces)"
+                android:inputType="number" />
+
+            <!-- Offer & Discount -->
+            <TextView
+                android:id="@+id/tvOfferText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="#FFF9C4"
+                android:padding="8dp"
+                android:text="Offer: Loading offers..."
+                android:textColor="#F57F17"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Discount Amount (Tk.)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etCash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Cash Collected (Tk.)"
+                android:inputType="numberDecimal" />
+
+            <!-- Geo-Fence Radius Status -->
+            <TextView
+                android:id="@+id/tvGeoStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Geo-Fence Status: Checking radius..."
+                android:textColor="#2E7D32"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSubmitOrder"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#1A237E"
+                android:text="Submit &amp; Route to DSR App"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
