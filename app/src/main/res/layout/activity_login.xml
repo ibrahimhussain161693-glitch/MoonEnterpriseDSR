@@ -57,17 +57,6 @@
             android:textColor="#FFFFFF"
             android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tvServerConfig"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:padding="8dp"
-            android:text="⚙️ Configure Server IP"
-            android:textColor="#1565C0"
-            android:textStyle="bold" />
-
     </LinearLayout>
 
 </LinearLayout>

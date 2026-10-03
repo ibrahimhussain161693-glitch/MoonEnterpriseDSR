@@ -7,10 +7,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -29,7 +27,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText etPhone, etPassword;
     private Button btnLogin;
-    private TextView tvServerConfig;
     private SessionManager session;
 
     @Override
@@ -51,10 +48,8 @@ public class LoginActivity extends AppCompatActivity {
         etPhone = findViewById(R.id.etPhone);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
-        tvServerConfig = findViewById(R.id.tvServerConfig);
 
         btnLogin.setOnClickListener(v -> performLogin());
-        tvServerConfig.setOnClickListener(v -> showServerConfigDialog());
     }
 
     private void checkPermissions() {
@@ -113,11 +108,11 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     },
                     error -> {
-                        String errorMsg = "কানেকশন এরর!\nURL: " + url + "\nমেসেজ: ";
+                        String errorMsg = "কানেকশন এরর!\nমেসেজ: ";
                         if (error.networkResponse != null) {
                             errorMsg += "HTTP Code " + error.networkResponse.statusCode;
                         } else {
-                            errorMsg += "সার্ভার রেসপন্স করছে না। ফোন ও ম্যাকবুক একই Wi-Fi তে আছে কিনা চেক করুন।";
+                            errorMsg += "সার্ভার রেসপন্স করছে না। ইন্টারনেট কানেকশন চেক করুন।";
                         }
                         Toast.makeText(LoginActivity.this, errorMsg, Toast.LENGTH_LONG).show();
                     }
@@ -140,25 +135,5 @@ public class LoginActivity extends AppCompatActivity {
         }
         startActivity(intent);
         finish();
-    }
-
-    private void showServerConfigDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("MacBook Local Server IP");
-
-        final EditText input = new EditText(this);
-        input.setHint("e.g. 192.168.0.105 or 10.0.2.2");
-        input.setText(session.getServerIp());
-        builder.setView(input);
-
-        builder.setPositiveButton("Save", (dialog, which) -> {
-            String ip = input.getText().toString().trim();
-            if (!ip.isEmpty()) {
-                session.setServerIp(ip);
-                Toast.makeText(LoginActivity.this, "Server URL set to: " + session.getBaseUrl(), Toast.LENGTH_LONG).show();
-            }
-        });
-        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
-        builder.show();
     }
 }
